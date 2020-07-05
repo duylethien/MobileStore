@@ -1,0 +1,26 @@
+<app-header title="Products" subtitle="All the available products in our store" button="view-cart" count="{{[(productNumber)]}}"></app-header>
+<div class="container">
+  <div class="card-deck">
+    <div class="card" *ngFor="let product of products">
+      <div class="card-body mx-auto d-block">
+        <h4 class="card-title">{{product.name}}</h4>
+        <img class="mx-auto d-block" src='{{product.productimg}}' style="width:220px;height:220px;" alt="">
+        <p class="card-text">{{product.description}}</p>
+        <p class="card-text">{{product.price}} USD
+        </p>
+        <p class="card-text">{{product.quantity}} units in stock
+        </p>
+        <button class="btn btn-primary" (click)="handleClickDetailProduct(product.name)">
+          <i class="fa fa-info-circle"></i>
+          Details
+        </button>
+        &nbsp;
+        <button class="btn btn-warning" (click)="handleClickOrderNow(product.name)">
+          <i class="fa fa-shopping-cart"></i>
+          Orders Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

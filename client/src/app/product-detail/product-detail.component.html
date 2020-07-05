@@ -1,0 +1,43 @@
+<app-header title="Product" subtitle="" button="view-cart" count="{{[(productNumber)]}}"></app-header>
+<div class="container">
+  <div class="product-dettail">
+    <div class="col-product-content left">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100 animate__animated animate__zoomIn" src="{{productItem.productimg}}"
+              alt="First slide">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-product-content">
+      <h4>{{productItem.name}}</h4>
+      <p>{{productItem.description}}</p>
+
+      <div class="product-content-detail">
+        <p class="title">Price::</p>
+        <p>{{productItem.price}} đồng</p>
+      </div>
+      <div class="product-content-detail">
+        <p class="title">Manufaturer:</p>
+        <p>{{productItem.manufaturer}}</p>
+      </div>
+      
+      <div class="product-content-detail">
+        <p class="title">Category:</p>
+        <p>{{productItem.category}}</p>
+      </div>
+
+      <div class="product-content-detail">
+        <p class="title">Available units in stock:</p>
+        <p>{{productItem.quantity}}</p>
+      </div>
+
+      <div class="gr-btn-product-detail">
+        <a href="#" class="btn btn-success" routerLink="/products"><i class="fas fa-arrow-circle-left"></i> Back</a>
+        <a class="btn btn-warning" (click)="handleClickOrderNow(productItem.name)"><i class="fas fa-shopping-cart"></i> Order</a>
+      </div>
+    </div>
+  </div>
+</div>

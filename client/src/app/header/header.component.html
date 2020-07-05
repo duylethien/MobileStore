@@ -1,0 +1,26 @@
+<div class="container-fluid" >
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 >
+          {{ title }}
+        </h1>
+        <span class="lead">{{ subtitle }}</span>
+      </div>
+      <div class="col text-right">
+        <button *ngIf="button === 'logout'" type="button" style="margin-top: 30px;" class="btn btn-danger"
+          (click)="onLogout()">
+          logout
+        </button>
+        <button *ngIf="button === 'view-cart'" type="button" style="margin-top: 30px;" class="btn btn-light"
+          routerLink="/cart">
+          <div class="cart"><i class="fas fa-shopping-cart icon-cart"></i> 
+          
+            <div class="count-cart">{{count}}</div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<br />

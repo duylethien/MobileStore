@@ -1,0 +1,19 @@
+.card{
+  margin: 10px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+.card img{
+  width: 240px;
+  height: 240px;
+}
+.gr-btn-product{
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+}
+.gr-btn-product .btn{
+  width: 48%;
+}
+
