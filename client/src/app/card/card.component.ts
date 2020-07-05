@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Local } from 'protractor/built/driverProviders';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -9,7 +11,9 @@ export class CardComponent implements OnInit {
 
   public cart = JSON.parse(localStorage.getItem("cart"))
   public totalPrice = 0
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   handleRemoveProduct = (productName) => {
     this.cart.forEach(element => {
@@ -28,6 +32,14 @@ export class CardComponent implements OnInit {
     this.cart = []
     localStorage.setItem("cart", JSON.stringify(this.cart))
     this.totalPrice = 0
+  }
+
+  handleCheckoutCart = () => {
+    alert("checkout successfull !!!")
+    this.cart = []
+    localStorage.setItem("cart", JSON.stringify(this.cart))
+    this.totalPrice = 0
+    this.router.navigateByUrl('/products');
   }
 
   ngOnInit() {

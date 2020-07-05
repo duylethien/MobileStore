@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('username', data.username);
           localStorage.setItem('password', data.password);
           console.log('login Success');
-          this.router.navigateByUrl('/products');
+          this.router.navigateByUrl('/add-product');
         } else {
           return window.alert('login fail')
         }

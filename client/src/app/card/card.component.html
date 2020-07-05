@@ -3,10 +3,12 @@
 <div class="container">
     <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
         <div class="col-6">
-            <button type="button" class="btn btn-danger" style="float: left;" (click)="handleCleanCart()">Clear Cart</button>
+            <button type="button" class="btn btn-danger" style="float: left;" (click)="handleCleanCart()">
+                <i class="fa fa-times-circle" > Clear Cart</i>
+            </button>
         </div>
         <div class="col-6">
-            <button type="button" class="btn btn-success" style="float: right;">Check Out</button>
+            <button type="button" class="btn btn-success" style="float: right;" (click)="handleCheckoutCart()">Check Out</button>
         </div>
     </div>
 </div>
@@ -32,7 +34,9 @@
                         <td>{{product.unitprice}}</td>
                         <td>{{product.price}}</td>
                         <td>
-                            <button type="button" class="btn btn-danger" style="float: left;" (click)="handleRemoveProduct(product.name)">Remove</button>
+                            <button type="button" class="btn btn-danger" style="float: left;" (click)="handleRemoveProduct(product.name)">
+                                <i class="fa fa-times" > Remove</i>
+                            </button>
                         </td>
                     </tr>
                     <!-- Hard row -->
