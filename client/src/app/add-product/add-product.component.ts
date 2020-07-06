@@ -49,7 +49,8 @@ export class AddProductComponent implements OnInit {
 
     this.addProductService.handleAddProduct(newProduct).subscribe(
       (data) => {
-        console.log(data)
+        alert(data)
+        this.router.navigateByUrl('/products');
       }
     )
   }
