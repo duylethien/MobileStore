@@ -8,3 +8,26 @@
   flex-wrap: wrap;
   width: 1080px;
 }
+.bgr-card{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.card {
+  width: 23%;
+  margin-bottom: 30px;
+}
+.card-img{
+  height: 200px;
+  width: 200px;
+  margin-bottom: 30px;
+}
+.gr-btn-product{
+  display: flex;
+  justify-content: start;
+}
+.gr-btn-product .btn{
+  font-size: 14px;
+}
