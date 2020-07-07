@@ -70,13 +70,20 @@ public class ProductController {
 	@PostMapping("/addproduct")
 	public ProductImage addproduct(@RequestBody Product product,ProductImage productImage)
 	{
-//		System.out.println(productImage);
 		productRepository.save(product);
-		Product getproduct=productRepository.findByname(product.getName());
-//		ProductImage productImage= new ProductImage();
 		
-		productImage.setProductID(getproduct.getProductID());
-		productImage.setPath(product.getPath());
+		Product getproduct=productRepository.findByname(product.getName());
+		if(getproduct.getPath().length()>1)
+		{
+			productImage.setProductID(getproduct.getProductID());
+			productImage.setPath(getproduct.getPath());
+		}
+		else{
+			productImage.setProductID(getproduct.getProductID());
+			productImage.setPath("../../assets/images/alert.png");
+			product.setPath("../../assets/images/alert.png");
+			productRepository.save(product);
+		}
 		return productImageRepository.save(productImage);
 	}
 	// delete product
