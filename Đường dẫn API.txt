@@ -1,0 +1,52 @@
+
+Lấy danh sách sản phẩm
+http://localhost:8080/product/getlist    GET
+
+
+Login  			POST
+http://localhost:8080/user/signin
+=>  Body cần truyền vào:
+{
+    
+    "name":"Beo",
+    "password":"1234"
+
+}
+
+
+
+Lấy Category để truyền vào Combobox
+http://localhost:8080/product/getcategory   GET
+
+
+Xem chi tiết sản phẩm   POST
+http://localhost:8080/product/getproductbyname
+
+=>Body cần truyền vào:
+
+    {
+     "name": "Iphone 8"
+    }
+
+
+
+Thêm sản phẩm mơi
+http://localhost:8080/product/addproduct  POST
+=>Body
+{
+   
+    "name": "Iphone",
+    "created_date": "2020-06-01",
+    "price": 9000000.0,
+    "description": "Iphone 8",
+    "product_group_id": 1,
+    "userID": 1,
+    "quantity": 200,
+    "path": "../../assets/images/iPhone-11-2.jpg"
+}
+
+
+
+
+
+
