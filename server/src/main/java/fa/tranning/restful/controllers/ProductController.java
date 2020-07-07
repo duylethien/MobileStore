@@ -44,7 +44,11 @@ public class ProductController {
 	public List<Product> getAllProduct(){
 		return productRepository.findAll();
 	}
-	
+	@GetMapping("/getcategory")
+	public List<ProductGroup> getProductCategory(){
+		return productGroupRepository.findAll();
+	}	
+
 	@PostMapping("/getproductbyname")
 	public Product getProductByName(@RequestBody Product products){
 //		

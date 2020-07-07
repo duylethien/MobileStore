@@ -26,7 +26,6 @@ export class AddProductComponent implements OnInit {
 
   onSubmit() {
     console.log(this.condition);
-    return;
     this.addProductService.uploadimage(this.fileSelected)
     .pipe()
     .subscribe(res=>{
