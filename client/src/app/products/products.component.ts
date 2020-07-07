@@ -13,33 +13,33 @@ export class ProductsComponent implements OnInit {
   public stringProductName = ''
   public productNumber = 0
   public products = [
-    {
-      productname: 'Iphone X',
-      description: 'A smartphone is a handheld personal computer with a mobile operating system ' +
-        'and an integrated mobile broadband cellular network connection for voice, SMS,' +
-        'and Internetdata communication; most, if not all, smartphones also support Wi-Fi',
-      price: '1099',
-      quantity: '800',
-      productimg: '../../assets/images/iPhone-11-2.jpg'
-    },
-    {
-      productname: 'Iphone X',
-      description: 'A smartphone is a handheld personal computer with a mobile operating system ' +
-        'and an integrated mobile broadband cellular network connection for voice, SMS,' +
-        'and Internetdata communication; most, if not all, smartphones also support Wi-Fi',
-      price: '2001',
-      quantity: '800',
-      productimg: '../../assets/images/iPhone-11-2.jpg'
-    },
-    {
-      productname: 'Iphone X',
-      description: 'A smartphone is a handheld personal computer with a mobile operating system ' +
-        'and an integrated mobile broadband cellular network connection for voice, SMS,' +
-        'and Internetdata communication; most, if not all, smartphones also support Wi-Fi',
-      price: '2002',
-      quantity: '800',
-      productimg: '../../assets/images/iPhone-11-2.jpg'
-    }
+    // {
+    //   productname: 'Iphone X',
+    //   description: 'A smartphone is a handheld personal computer with a mobile operating system ' +
+    //     'and an integrated mobile broadband cellular network connection for voice, SMS,' +
+    //     'and Internetdata communication; most, if not all, smartphones also support Wi-Fi',
+    //   price: '1099',
+    //   quantity: '800',
+    //   productimg: '../../assets/images/iPhone-11-2.jpg'
+    // },
+    // {
+    //   productname: 'Iphone X',
+    //   description: 'A smartphone is a handheld personal computer with a mobile operating system ' +
+    //     'and an integrated mobile broadband cellular network connection for voice, SMS,' +
+    //     'and Internetdata communication; most, if not all, smartphones also support Wi-Fi',
+    //   price: '2001',
+    //   quantity: '800',
+    //   productimg: '../../assets/images/iPhone-11-2.jpg'
+    // },
+    // {
+    //   productname: 'Iphone X',
+    //   description: 'A smartphone is a handheld personal computer with a mobile operating system ' +
+    //     'and an integrated mobile broadband cellular network connection for voice, SMS,' +
+    //     'and Internetdata communication; most, if not all, smartphones also support Wi-Fi',
+    //   price: '2002',
+    //   quantity: '800',
+    //   productimg: '../../assets/images/iPhone-11-2.jpg'
+    // }
   ]
 
   constructor(
@@ -113,6 +113,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.list()
     let productNumber = JSON.parse(localStorage.getItem("cart"))
+    if(productNumber!=null)
     for(let i = 0; i < productNumber.length; i++) {
       this.productNumber += productNumber[i]["amount"] 
     }

@@ -14,7 +14,15 @@ export class addProductService {
     constructor(private http: HttpClient) {
         
     }
-
+    uploadimage(file)
+    {
+        const fd=new FormData();
+        fd.append('file',file);
+        return this.http.post<any>(`https://uploadfileimage.herokuapp.com/uploadfileimage`,fd)
+        .pipe(map(res=>{
+            return res;
+        }));
+    }
     public get currentNewProductValue(): NewProduct {
         return this.currentNewProductSubject.value;
     }
@@ -35,6 +43,17 @@ export class addProductService {
                         const error = "error"
                         return error;
                     }
+                })
+            );
+    }
+    public getCategory()
+    {
+        const listUrl = `${this.urlAPI}/product/getcategory`;
+        return this.http
+            .get<any>(listUrl)
+            .pipe(
+                map((res) => {
+                 return res;
                 })
             );
     }
