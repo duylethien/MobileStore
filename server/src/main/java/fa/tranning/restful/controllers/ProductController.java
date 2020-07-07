@@ -28,7 +28,7 @@ import fa.tranning.restful.repositories.ProductVariantRepository;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("product")
 public class ProductController {
 	
@@ -70,6 +70,7 @@ public class ProductController {
 		productRepository.save(product);
 		Product getproduct=productRepository.findByname(product.getName());
 //		ProductImage productImage= new ProductImage();
+		//efgregrrgrtrtr
 		
 		productImage.setProductID(getproduct.getProductID());
 		productImage.setPath(product.getPath());
