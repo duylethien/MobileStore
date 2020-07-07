@@ -53,7 +53,7 @@ export class AddProductComponent implements OnInit {
         quantity: this.quantity,
         path: this.imgURL
       }
-  
+
       this.addProductService.handleAddProduct(newProduct).subscribe(
         (data) => {
           console.log(data)
